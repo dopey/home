@@ -21,7 +21,7 @@ alias myip="ifconfig | grep inet  | grep -v 127.0.0.1 | cut -d\ -f2"
 
 POINTER_CHAR="⬆"
 PREINFO="\n$POINTER_CHAR $BIBLUE[ "$BLUE"exit: $WHITE\$?$BIBLUE ] [ "$BLUE"time: $WHITE\t$BIBLUE ]$END_COLOR"
-PREGIT="$PREINFO\n$YELLOW\u$BIBLUE@$BLUE\h$WHITE \w$END_COLOR"
+PREGIT="$PREINFO\n$WHITE\u $PURPLE@ $BLUE\h$WHITE \w$END_COLOR"
 POSTGIT=" $RED\$$END_COLOR "
 
 export PROMPT_COMMAND="__git_ps1 \"$PREGIT\" \"$POSTGIT\""
