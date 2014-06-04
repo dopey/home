@@ -1,0 +1,22 @@
+[user]
+	email = mx.furman@gmail.com
+	name = max furman
+[color]
+    ui = true
+[alias]
+    co = checkout
+    ci = commit
+    st = status
+    br = branch
+    type = cat-file -t
+    dump = cat-file -p
+    pl = pull origin
+    plr = pull --rebase origin
+    plm = pull origin master
+    plrm = pull --rebase origin master
+    pl = pull --rebase
+    ps = push origin
+    psm = push origin master
+    dif = diff --color
+    hist = !git --no-pager log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short -20
+    history = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short`
