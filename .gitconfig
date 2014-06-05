@@ -16,7 +16,7 @@
     old = red bold
     new = white
 [color "status"]
-    added = green
+    added = cyan bold
     changed = yellow
     untracked = red
 [alias]
