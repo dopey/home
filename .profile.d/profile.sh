@@ -59,5 +59,5 @@ export PYTHONPATH
 
 
 function vbp {
-    nohup VBoxHeadless -startvm "Ubuntu 12.04 Puppet" &
+   nohup VBoxHeadless -startvm "betable-ubuntu64" &
 }
