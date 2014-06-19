@@ -50,6 +50,9 @@ ID=${WORK}/betable-id
 ADMIN_ID=${WORK}/betable-admin-id
 GOSRC=/usr/local/Cellar/go/1.1
 
+EDITOR=vim
+VISUAL=vim
+
 GRAMMAR=~/Desktop/SHARED/aenea
 
 export PATH
