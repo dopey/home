@@ -48,6 +48,7 @@ ADMIN_GAMES=${WORK}/betable-admin-games
 GAME_CONFIG=${WORK}/node-betable-game-configuration
 ID=${WORK}/betable-id
 ADMIN_ID=${WORK}/betable-admin-id
+PP=${WORK}/puppet-betable
 GOSRC=/usr/local/Cellar/go/1.1
 
 EDITOR=vim
@@ -59,6 +60,17 @@ export PATH
 export WORK
 export PYTHONPATH
 
+# CASSANDRA ENV VARS
+export CASSANDRA_NODES="127.0.0.1:9160"
+export CASSANDRA_USERNAME="cassandra"
+export CASSANDRA_PASSWORD="cassandra"
+export CASSANDRA_CERTIFICATE="/etc/ssl/certs/betable-ca.pem"
+export CASSANDRA_TRUSTSTORE="/etc/cassandra/client-truststore"
+export CASSANDRA_TRUSTSTORE_PASSWORD="betable"
+export CASSANDRA_AUTH_ENABLED="false"
+export CASSANDRA_SSL_ENABLED="false"
+export CASSANDRA_ALT_NAME="cassandra-development"
+
 
 export HISTCONTROL=ignoredups:erasedups  # no duplicate entries
 export HISTSIZE=100000                   # big big history
@@ -66,11 +78,15 @@ export HISTFILESIZE=100000               # big big history
 shopt -s histappend                      # append to history, don't overwrite it
 
 # Save and reload the history after each command finishes
-export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
+#export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 
 # Fixes Java stuff launching into the dock and messing with Spaces
-export _JAVA_OPTIONS=-Djava.awt.headless=true
+export _JAVA_OPTIONS=-Djava.awt.headless=false
 
 function vbp {
    nohup VBoxHeadless -startvm "betable-ubuntu64" &
+}
+
+function psg {
+    ps jaux|head -1 && ps jaux|GREP_OPTIONS= grep "$1" | GREP_OPTIONS= grep -v grep;
 }

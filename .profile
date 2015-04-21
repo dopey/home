@@ -2,3 +2,4 @@
 for PATHNAME in ~/.profile.d/*.sh
 do . "$PATHNAME"
 done
+#source /Users/max/.oh-my-git/prompt.sh
