@@ -83,10 +83,18 @@ shopt -s histappend                      # append to history, don't overwrite it
 # Fixes Java stuff launching into the dock and messing with Spaces
 export _JAVA_OPTIONS=-Djava.awt.headless=false
 
-function vbp {
+function precise {
    nohup VBoxHeadless -startvm "betable-ubuntu64" &
+}
+
+function trusty {
+   nohup VBoxHeadless -startvm "betable-trusty64" &
 }
 
 function psg {
     ps jaux|head -1 && ps jaux|GREP_OPTIONS= grep "$1" | GREP_OPTIONS= grep -v grep;
+}
+
+function psm {
+    ps -eo size,pid,user,command | awk '{ hr=$1/1024 ; printf("%13.6f Mb ",hr) } { for ( x=4 ; x<=NF ; x++ ) { printf("%s ",$x) } print "" }' | sort
 }
