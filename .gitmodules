@@ -1,9 +1,3 @@
-[submodule "/Users/max/.vim"]
-	path = /Users/max/.vim
-	url = git@github.com:dopey/dotvim.git
-[submodule "dotfiles"]
-	path = dotfiles
-	url = git@github.com:dopey/dotfiles.git
 [submodule "/Users/max/dotfiles"]
 	path = /Users/max/dotfiles
 	url = git@github.com:dopey/dotfiles.git
