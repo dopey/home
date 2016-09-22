@@ -19,6 +19,7 @@ alias -- -='popd'
 alias ?='dirs -v'
 alias myip="ifconfig | grep inet  | grep -v 127.0.0.1 | cut -d\ -f2"
 alias hangoutsrage='sudo killall AppleCameraAssistant'
+alias vg='vagrant'
 
 POINTER_CHAR="⬆"
 PREINFO="\n$POINTER_CHAR $BIBLUE[ "$BLUE"exit: $WHITE\$?$BIBLUE ] [ "$BLUE"time: $WHITE\t$BIBLUE ]$END_COLOR"
