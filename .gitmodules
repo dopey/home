@@ -4,3 +4,9 @@
 [submodule "/Users/max/.vim"]
 	path = /Users/max/.vim
 	url = git@github.com:dopey/dotvim.git
+[submodule "/Users/max/.profile.d"]
+	path = /Users/max/.profile.d
+	url = git@github.com:dopey/profile.d.git
+[submodule "/Users/max/.home-profile.d"]
+	path = /Users/max/.home-profile.d
+	url = git@github.com:dopey/home-profile.d.git
