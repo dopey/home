@@ -3,10 +3,13 @@
 set -o xtrace
 
 # --- fzf
-brew install fzf
+FZF=$(which fzf)
+if [ $? -ne 0 ]; then
+    brew install fzf
 
-# Install shell extensions
-/usr/local/opt/fzf/install
+    # Install shell extensions
+    /usr/local/opt/fzf/install
+fi
 # ---
 
 git submodule init;
