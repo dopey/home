@@ -2,6 +2,13 @@
 
 set -o xtrace
 
+# --- ag
+AG=$(which ag)
+if [ $? -ne 0 ]; then
+    brew install ag
+fi
+# ---
+
 # --- fzf
 FZF=$(which fzf)
 if [ $? -ne 0 ]; then
