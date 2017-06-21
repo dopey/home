@@ -1,15 +1,15 @@
-[submodule "/Users/max/.vim"]
-	path = /Users/max/.vim
+[submodule ".vim"]
+	path = .vim
 	url = git@github.com:dopey/dotvim.git
-[submodule "/Users/max/.profile.d"]
-	path = /Users/max/.profile.d
+[submodule ".profile.d"]
+	path = .profile.d
 	url = git@github.com:dopey/profile.d.git
-[submodule "/Users/max/.home-profile.d"]
-	path = /Users/max/.home-profile.d
-	url = git@github.com:dopey/home-profile.d.git
-[submodule "/Users/max/.files"]
-	path = /Users/max/.files
-	url = git@github.com:dopey/dotfiles.git
-[submodule "/Users/max/.linux-profile.d"]
-	path = /Users/max/.linux-profile.d
+[submodule ".linux-profile.d"]
+	path = .linux-profile.d
 	url = git@github.com:dopey/linux-profile.d.git
+[submodule ".home-profile.d"]
+	path = .home-profile.d
+	url = git@github.com:dopey/home-profile.d.git
+[submodule ".files"]
+	path = .files
+	url = git@github.com:dopey/dotfiles.git
