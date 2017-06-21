@@ -2,22 +2,44 @@
 
 set -o xtrace
 
-# --- ag
-AG=$(which ag)
-if [ $? -ne 0 ]; then
-    brew install ag
-fi
-# ---
+if [[ "${OSTYPE}" == "linux-gnu" ]]; then
+    # ------------
+    # ag
+    # ------------
+    AG="$(which ag)"
+    if [ $? -ne 0 ]; then
+            sudo apt-get install "silversearcher-ag"
+    fi
 
-# --- fzf
-FZF=$(which fzf)
-if [ $? -ne 0 ]; then
-    brew install fzf
+    # ------------
+    # fzf
+    # ------------
+    FZF="$(which fzf)"
+    if [ $? -ne 0 ]; then
+        git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+            ~/.fzf/install
+    fi
+elif [[ "${OSTYPE}" == "darwin"* ]]; then
+    # ------------
+    # ag
+    # ------------
+    AG=$(which ag)
+    if [ $? -ne 0 ]; then
+        brew install ag
+    fi
 
-    # Install shell extensions
-    /usr/local/opt/fzf/install
+    # ------------
+    # fzf
+    # ------------
+    FZF=$(which fzf)
+    if [ $? -ne 0 ]; then
+        brew install fzf
+
+        # Install shell extensions
+        /usr/local/opt/fzf/install
+    fi
 fi
-# ---
+
 
 git submodule init;
 git submodule update;
