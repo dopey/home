@@ -4,12 +4,6 @@
 [submodule ".profile.d"]
 	path = .profile.d
 	url = git@github.com:dopey/profile.d.git
-[submodule ".linux-profile.d"]
-	path = .linux-profile.d
-	url = git@github.com:dopey/linux-profile.d.git
-[submodule ".home-profile.d"]
-	path = .home-profile.d
-	url = git@github.com:dopey/home-profile.d.git
 [submodule ".files"]
 	path = .files
 	url = git@github.com:dopey/dotfiles.git
