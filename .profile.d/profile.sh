@@ -48,6 +48,7 @@ alias ...='cd ../..'
 alias ?='dirs -v'
 alias +='pushd'
 alias -- -='popd'
+alias vi=nvim
 
 # ip
 alias myip="ifconfig | grep '^\s*inet ' | grep -v 127.0.0.1 | cut -d' ' -f2"
