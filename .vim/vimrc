@@ -131,7 +131,9 @@ set wrapscan
 set backspace=indent,eol,start
 
 " Maps
+"
 " ---------
+" set map leader to ','
 let mapleader = ","
 " space clears screeen of all highlights
 nnoremap <silent> <Space> :nohl<CR><C-l>
@@ -140,21 +142,21 @@ map j gj
 map k gk
 
 " Map for easier escape access
-inoremap ,w <Esc>:w<Enter>
-nnoremap ,w :w<CR>
+inoremap <leader>w <Esc>:w<CR>
+nnoremap <leader>w :w<CR>
 
 " Map for easier quit access
-nnoremap ,q :q<CR>
+nnoremap <leader>q :q<CR>
 
 "New line below or above in normal mode
-nnoremap ,a O<Esc>j
-nnoremap ,b o<Esc>k
+nnoremap <leader>f O<Esc>j
+nnoremap <leader>g o<Esc>k
 
 
 "Delete line above
-map ,da kdd
+map <leader>da kdd
 "Delete line below
-map ,db jddk
+map <leader>db jddk
 
 "Select recently pasted area in visual block
 nnoremap <expr> gp '`[' . strpart(getregtype(), 0, 1) . '`]'
@@ -225,6 +227,21 @@ map <leader>vimrc :vsp ~/.vim/vimrc<cr>
 let g:jsdoc_allow_input_prompt=1
 let g:jsdoc_additional_descriptions=1
 
+" =============================================================================
+" Copy Paste
+" =============================================================================
+
+" copy
+vnoremap  <leader>y  "+y
+nnoremap  <leader>Y  "+yg_
+nnoremap  <leader>y  "+y
+nnoremap  <leader>yy  "+yy
+
+" paste
+nnoremap <leader>p "+p
+nnoremap <leader>P "+P
+vnoremap <leader>p "+p
+vnoremap <leader>P "+P
 
 " =============================================================================
 " Revision Control
@@ -257,7 +274,7 @@ command! -bar -nargs=1 Browse silent! !open <args>
 " =============================================================================
 
 " nerd-tree
-map <C-t> :NERDTreeToggle<CR>
+map <C-y> :NERDTreeToggle<CR>
 
 " FZF
 if g:os == "Darwin"
@@ -320,8 +337,8 @@ map <C-j> :cnext<CR>
 " previous in quickfix list
 map <C-k> :cprevious<CR>
 " close in quickfix list
-nnoremap .a :cclose<CR>
-run :GoBuild or :GoTestCompile based on the go file
+nnoremap <leader>a :cclose<CR>
+" run :GoBuild or :GoTestCompile based on the go file
 function! s:build_go_files()
   let l:file = expand('%')
   if l:file =~# '^\f\+_test\.go$'
@@ -330,7 +347,8 @@ function! s:build_go_files()
     call go#cmd#Build(0)
   endif
 endfunction
-autocmd FileType go nmap <leader>b :<C-u>call <SID>build_go_files()<CR>
+autocmd FileType go inoremap <leader>b <Esc>:<C-u>call <SID>build_go_files()<CR>
+autocmd FileType go nnoremap <leader>b :<C-u>call <SID>build_go_files()<CR>
 " :GoRun
 autocmd FileType go nmap <leader>r  <Plug>(go-run)
 " :GoTest
@@ -338,11 +356,25 @@ autocmd FileType go nmap <leader>t  <Plug>(go-test)
 " toggle :GoCoverage
 autocmd FileType go nmap <Leader>c <Plug>(go-coverage-toggle)
 
-" disable :GoDef mappings
-let g:go_def_mapping_enabled = 0
+" :GoInfo
+autocmd FileType go nmap <Leader>i <Plug>(go-info)
 
 " all lists will be of type quickfix
 let g:go_list_type = "quickfix"
 
 " force golang conversion to use camelcase
 let g:go_addtags_transform = "camelcase"
+
+" syntax highlighting
+let g:go_highlight_types = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_functions = 1
+
+" go-metalinter on save
+let g:go_metalinter_autosave = 1
+" checkers to run on save
+let g:go_metalinter_autosave_enabled = ['vet', 'golint']
+" auto highlight sameIds
+let g:go_auto_sameids = 1
