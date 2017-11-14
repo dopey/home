@@ -34,6 +34,7 @@ if [[ "${OSTYPE}" == "darwin"* ]]; then
     alias grep='ggrep'
     alias hangoutsrage='sudo killall AppleCameraAssistant'
     alias vg='vagrant'
+    alias la='ls -la'
 elif [[ "${OSTYPE}" == "linux-gnu" ]]; then
     # ls
     LS_COLORS=$LS_COLORS:'di=0;34:' ; export LS_COLORS
