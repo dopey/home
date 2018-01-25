@@ -1,0 +1,44 @@
+[user]
+	email = mx.furman@gmail.com
+	name = max furman
+[color]
+    ui = auto
+    branch = auto
+    diff = auto
+    status = auto
+[color "branch"]
+    current = yellow reverse
+    local = yellow
+    remote = yellow
+[color "diff"]
+    meta = yellow
+    frag = blue
+    old = red bold
+    new = white
+[color "status"]
+    added = cyan bold
+    changed = yellow
+    untracked = red
+[alias]
+    ca = commit --amend
+    cane = commit --amend --no-edit
+    co = checkout
+    ci = commit
+    st = status
+    br = branch
+    type = cat-file -t
+    dump = cat-file -p
+    pl = pull origin
+    plr = pull --rebase origin
+    plm = pull origin master
+    plrm = pull --rebase origin master
+    ps = push origin
+    psd = push origin --delete
+    psm = push origin master
+    dif = diff --color
+    hist = !git --no-pager log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short -20
+    history = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short`
+[push]
+	default = simple
+[help]
+    autocorrect = 1
