@@ -49,7 +49,7 @@ ln -s ~/.vim/gvimrc ~/.gvimrc
 ln -sf ~/.files/inputrc ~/.inputrc
 ln -sf ~/.files/tmux.conf ~/.tmux.conf
 ln -sf ~/.files/jshintrc ~/.jshintrc
-ln -s ~/.files/ackrc ~/.ackrc
-ln -s ~/.files/htoprc ~/.htoprc
-ln -s ~/.files/gitconfig ~/.gitconfig
-ln -s ~/.files/gitignore ~/.gitignore
+ln -sf ~/.files/ackrc ~/.ackrc
+ln -sf ~/.files/htoprc ~/.htoprc
+ln -sf ~/.files/gitconfig ~/.gitconfig
+ln -sf ~/.files/gitignore ~/.gitignore
