@@ -27,6 +27,7 @@ if [[ "${OSTYPE}" == "linux-gnu" ]]; then
     NVIM="$(which "nvim")"
     if [[ "$?" -ne 0 ]]; then
         curl -o ~/bin/nvim -L https://github.com/neovim/neovim/releases/download/nightly/nvim.appimage
+        chmod u+x ~/bin/nvim
     fi
 
     # ------------
