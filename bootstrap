@@ -17,6 +17,7 @@ if [[ "${OSTYPE}" == "linux-gnu" ]]; then
     PIP="$(dpkg -s "python-pip" >/dev/null)"
     if [[ "$?" -ne 0 ]]; then
         sudo apt-get install "python-pip"
+        pip install --upgrade pip
     fi
 
     # ------------
