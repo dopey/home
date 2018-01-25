@@ -6,15 +6,32 @@ if [[ "${OSTYPE}" == "linux-gnu" ]]; then
     # ------------
     # ag
     # ------------
-    AG="$(which ag)"
+    AG="$(which "ag")"
     if [ $? -ne 0 ]; then
-            sudo apt-get install "silversearcher-ag"
+        sudo apt-get install "silversearcher-ag"
+    fi
+
+    # ------------
+    # python-pip
+    # ------------
+    PIP="$(dpkg -s "python-pip" >/dev/null)"
+    if [[ "$?" -ne 0 ]]; then
+        sudo apt-get install "python-pip"
+    fi
+
+    # ------------
+    # neovim
+    # ------------
+    pip2 install --upgrade --user neovim
+    NVIM="$(which "nvim")"
+    if [[ "$?" -ne 0 ]]; then
+        curl -o ~/bin/nvim -L https://github.com/neovim/neovim/releases/download/nightly/nvim.appimage
     fi
 
     # ------------
     # fzf
     # ------------
-    FZF="$(which fzf)"
+    FZF="$(which "fzf")"
     if [ $? -ne 0 ]; then
         git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
             ~/.fzf/install
@@ -23,7 +40,7 @@ elif [[ "${OSTYPE}" == "darwin"* ]]; then
     # ------------
     # ag
     # ------------
-    AG=$(which ag)
+    AG="$(which "ag")"
     if [ $? -ne 0 ]; then
         brew install ag
     fi
@@ -31,7 +48,7 @@ elif [[ "${OSTYPE}" == "darwin"* ]]; then
     # ------------
     # fzf
     # ------------
-    FZF=$(which fzf)
+    FZF=$(which "fzf")
     if [ $? -ne 0 ]; then
         brew install fzf
 
@@ -39,6 +56,13 @@ elif [[ "${OSTYPE}" == "darwin"* ]]; then
         /usr/local/opt/fzf/install
     fi
 fi
+
+mkdir -p "~/bin"
+
+# neovim
+
+
+
 
 # .vim
 git submodule update --init --recursive
