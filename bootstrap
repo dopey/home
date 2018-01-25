@@ -3,6 +3,9 @@
 set -o xtrace
 
 if [[ "${OSTYPE}" == "linux-gnu" ]]; then
+
+    mkdir -p "~/bin"
+
     # ------------
     # ag
     # ------------
@@ -58,13 +61,6 @@ elif [[ "${OSTYPE}" == "darwin"* ]]; then
         /usr/local/opt/fzf/install
     fi
 fi
-
-mkdir -p "~/bin"
-
-# neovim
-
-
-
 
 # .vim
 git submodule update --init --recursive
