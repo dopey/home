@@ -39,7 +39,8 @@ if [[ "${OSTYPE}" == "linux-gnu" ]]; then
     # ------------
     FZF="$(which "fzf")"
     if [ $? -ne 0 ]; then
-        git clone --depth 1 "https://github.com/junegunn/fzf.git" "${HOME}/.fzf" "${HOME}/.fzf/install"
+        git clone --depth 1 "https://github.com/junegunn/fzf.git" "${HOME}/.fzf"
+        "${HOME}/.fzf/install"
     fi
 elif [[ "${OSTYPE}" == "darwin"* ]]; then
     # ------------
