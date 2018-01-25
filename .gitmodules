@@ -4,9 +4,6 @@
 [submodule ".vim/bundle/jshint"]
 	path = .vim/bundle/jshint
 	url = https://github.com/jshint/jshint.git
-[submodule ".vim/bundle/markdown-preview"]
-	path = .vim/bundle/markdown-preview
-	url = git://github.com/JamshedVesuna/vim-markdown-preview.git
 [submodule ".vim/bundle/nerdtree"]
 	path = .vim/bundle/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
