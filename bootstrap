@@ -30,8 +30,10 @@ if [[ "${OSTYPE}" == "linux-gnu" ]]; then
     pip2 install --upgrade --user neovim
     NVIM="$(which "nvim")"
     if [[ "$?" -ne 0 ]]; then
-        curl -o "${BIN}/nvim" -L "https://github.com/neovim/neovim/releases/download/nightly/nvim.appimage"
-        chmod u+x "${BIN}/nvim"
+        sudo apt-get install "software-properties-common"
+        sudo add-apt-repository ppa:neovim-ppa/stable
+        sudo apt-get update
+        sudo apt-get install neovim
     fi
 
     # ------------
