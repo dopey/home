@@ -1,6 +1,11 @@
 " =============================================================================
 " Pathogen
 " =============================================================================
+let g:pathogen_disabled = []
+if $USER != "max"
+    call add(g:pathogen_disabled, "ultisnips")
+    call add(g:pathogen_disabled, "voicecode")
+endif
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
@@ -43,19 +48,21 @@ au FileType make setlocal noexpandtab
 " Code Completion
 " =============================================================================
 
-" UltiSnips
-" ---------
-" Trigger configuration. Do not use <tab> if you use
-" https://github.com/Valloric/YouCompleteMe.
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+if &runtimepath =~ 'ultisnips'
+    " UltiSnips
+    " ---------
+    " Trigger configuration. Do not use <tab> if you use
+    " https://github.com/Valloric/YouCompleteMe.
+    let g:UltiSnipsExpandTrigger="<tab>"
+    let g:UltiSnipsJumpForwardTrigger="<c-b>"
+    let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
-" If you want :UltiSnipsEdit to split your window.
-let g:UltiSnipsEditSplit="vertical"
+    " If you want :UltiSnipsEdit to split your window.
+    let g:UltiSnipsEditSplit="vertical"
 
-" Set python version
-let g:UltiSnipsUsePythonVersion = 2
+    " Set python version
+    let g:UltiSnipsUsePythonVersion = 2
+endif
 
 
 " =============================================================================
@@ -208,7 +215,7 @@ noremap ;; ;
 set nocscopeverbose
 
 " JS Mocha macro -- test only
-let @o= "ea.only:w\n"
+let @o= "ea.onlyw\n"
 
 set wildignore+=*/tmp/*,*/.git/*,*/*.o,*/*.a,*/*.dep,*/*.swp	" Linux/MacOSX
 
