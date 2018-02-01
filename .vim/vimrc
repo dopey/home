@@ -328,6 +328,10 @@ let vim_markdown_preview_github=1
 " project on save
 let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
 
+" arguments to puppetlint
+"  * ignore 'selector_inside_resource error'
+let g:syntastic_puppet_puppetlint_args = ['--no-selector_inside_resource-check']
+
 
 " =============================================================================
 " Golang
