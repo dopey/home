@@ -324,13 +324,25 @@ let vim_markdown_preview_github=1
 " Syntastic
 " =============================================================================
 
+" Recommended Settings
+" ---
+"set statusline+=%#warningmsg#
+"set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%*
+"
+"let g:syntastic_always_populate_loc_list = 1
+"let g:syntastic_auto_loc_list = 1
+"let g:syntastic_check_on_open = 0
+"let g:syntastic_check_on_wq = 0
+" ---
+
 " redefine syntastic go checkers, otherwise syntastic recompiles entire
 " project on save
 let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
 
 " arguments to puppetlint
 "  * ignore 'selector_inside_resource error'
-let g:syntastic_puppet_puppetlint_args = ['--no-selector_inside_resource-check']
+let g:syntastic_puppet_puppetlint_args = '--no-selector_inside_resource-check --no-140chars-check'
 
 
 " =============================================================================
