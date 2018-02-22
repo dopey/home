@@ -227,7 +227,6 @@ map <leader>vimrc :vsp ~/.vim/vimrc<cr>
 "autocmd bufwritepost vimrc source $MYVIMRC
 
 
-
 " jsdoc
 " --------
 " Ctrl-g hotkey
@@ -257,7 +256,7 @@ vnoremap <leader>P "+P
 " fugitive
 nnoremap <space>ga :Git add %:p<CR><CR>
 nnoremap <space>gs :Gstatus<CR>
-nnoremap <space>gc :Gcommit -v -q<CR>
+nnoremap <space>gi :Gcommit -a -v -q<CR>
 nnoremap <space>gt :Gcommit -v -q %:p<CR>
 nnoremap <space>gd :Gdiff<CR>
 nnoremap <space>ge :Gedit<CR>
@@ -342,7 +341,7 @@ let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
 
 " arguments to puppetlint
 "  * ignore 'selector_inside_resource error'
-let g:syntastic_puppet_puppetlint_args = '--no-selector_inside_resource-check --no-140chars-check'
+let g:syntastic_puppet_puppetlint_args = '--no-selector_inside_resource-check --no-140chars-check --no-arrow_alignment-check'
 
 
 " =============================================================================
