@@ -10,6 +10,7 @@ alias gh='git --no-pager log --pretty=format:"%h %ad | %s%d [%an]" --graph --dat
 alias gi='git commit -av'
 alias gl='git pull --rebase'
 alias glrm='git pull --rebase origin master'
-alias gp='git push origin'
+alias gp='git push'
+alias gpf='git push --force'
 alias gpm='git push origin master'
 alias gs='git status'

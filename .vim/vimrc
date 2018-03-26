@@ -1,3 +1,8 @@
+if has('nvim')
+    set runtimepath^=~/.vim runtimepath+=~/.vim/after
+    let &packpath = &runtimepath
+endif
+
 " =============================================================================
 " Pathogen
 " =============================================================================
@@ -9,6 +14,7 @@ endif
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
+
 " =============================================================================
 " General Settings
 " =============================================================================
@@ -17,6 +23,7 @@ set number                  "set line numbers
 filetype plugin indent on   "figure out file type
 au BufWritePost .vimrc so ~/.vimrc "automatically reload vimrc when it's saved
 au FileType javascript set dictionary+=$HOME/.vim/bundle/node-vim/dict/node.dict    "node dictionary
+au FileType puppet setlocal tabstop=4 expandtab shiftwidth=4 softtabstop=4
 "resize splits when the window is resized
 au VimResized * exe 'normal! \<c-2>='
 
@@ -28,7 +35,6 @@ if !exists("g:os")
         let g:os = substitute(system('uname'), '\n', '', '')
     endif
 endif
-
 
 
 " Indenting and tabbing
@@ -147,6 +153,11 @@ nnoremap <silent> <Space> :nohl<CR><C-l>
 " don't jump over text-wrapped lines
 map j gj
 map k gk
+
+" Map for escape in voice-to-text
+inoremap <leader>/ <Esc>l
+nnoremap <leader>/ <Nop>
+vnoremap <leader>/ <Nop>
 
 " Map for easier escape access
 inoremap <leader>w <Esc>:w<CR>
@@ -341,7 +352,11 @@ let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
 
 " arguments to puppetlint
 "  * ignore 'selector_inside_resource error'
-let g:syntastic_puppet_puppetlint_args = '--no-selector_inside_resource-check --no-140chars-check --no-arrow_alignment-check'
+let g:syntastic_puppet_puppetlint_args =
+    \ '--no-selector_inside_resource-check --no-140chars-check --no-arrow_alignment-check'
+
+let g:syntastic_eruby_ruby_quiet_messages =
+    \ {'regex': 'possibly useless use of .* in void context'}
 
 
 " =============================================================================
