@@ -78,11 +78,9 @@ endif
 set cc=80   " set columncolor at column 80
 
 syntax on
+set termguicolors
 set background=dark
-" let g:solarized_termcolors = 256
-" let g:solarized_visibility = "high"
-" let g:solarized_contrast = "high"
-colorscheme solarized
+colorscheme solarized8_flat
 set modeline
 
 "Toggle solarized bg

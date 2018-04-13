@@ -25,9 +25,6 @@
 [submodule ".vim/bundle/bracketed-paste"]
 	path = .vim/bundle/bracketed-paste
 	url = https://github.com/ConradIrwin/vim-bracketed-paste
-[submodule ".vim/bundle/colors-solarized"]
-	path = .vim/bundle/colors-solarized
-	url = git@github.com:dopey/vim-colors-solarized.git
 [submodule ".vim/bundle/fugitive"]
 	path = .vim/bundle/fugitive
 	url = https://github.com/tpope/vim-fugitive.git
@@ -58,9 +55,9 @@
 [submodule ".vim/bundle/surround"]
 	path = .vim/bundle/surround
 	url = git@github.com:dopey/vim-surround.git
-[submodule ".vim/bundle/voicecode"]
-	path = .vim/bundle/voicecode
-	url = git@github.com:dopey/vim-voicecode.git
 [submodule ".vim/bundle/markdown-preview"]
 	path = .vim/bundle/markdown-preview
 	url = https://github.com/JamshedVesuna/vim-markdown-preview.git
+[submodule ".vim/bundle/solarized8"]
+	path = .vim/bundle/solarized8
+	url = https://github.com/lifepillar/vim-solarized8.git
