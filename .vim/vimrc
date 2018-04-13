@@ -83,9 +83,6 @@ set background=dark
 colorscheme solarized8_flat
 set modeline
 
-"Toggle solarized bg
-call togglebg#map("<C-g>")
-
 " Set paste toggle
 nnoremap <F8> :set invpaste paste?<CR>
 set pastetoggle=<F8>
