@@ -7,7 +7,7 @@ if [[ "${OSTYPE}" == "darwin"* ]]; then
     PATH="${PATH}:${HOME}/bin:${HOME}/.bin"
     # smallstep
     PATH="${PATH}:/Users/max/src/github.com/smallstep-team/step/bin"
-    export STEP="/Users/max/src/github.com/smallstep-team/step"
+    export STEPPATH="/Users/max/src/github.com/smallstep-team/step/.step"
 elif [[ "${OSTYPE}" == "linux-gnu" ]]; then
     PATH="${PATH}:/snap/bin"
     PATH="${PATH}:${HOME}/.local/bin"
