@@ -279,6 +279,7 @@ nnoremap <space>gpl :Gpull<CR>
 
 " Necessary to define Browse so vim can open browser windows
 command! -bar -nargs=1 Browse silent! !open <args>
+noremap <leader>e :Gbrowse<cr>
 
 
 " =============================================================================
