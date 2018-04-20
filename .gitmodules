@@ -61,3 +61,6 @@
 [submodule ".vim/bundle/solarized8"]
 	path = .vim/bundle/solarized8
 	url = https://github.com/lifepillar/vim-solarized8.git
+[submodule ".vim/bundle/rhubarb"]
+	path = .vim/bundle/rhubarb
+	url = https://github.com/tpope/vim-rhubarb.git
