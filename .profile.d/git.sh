@@ -18,3 +18,10 @@ alias gpf='git push --force'
 alias gpm='git push origin master'
 alias gpu='git push --set-upstream origin $(git rev-parse --abbrev-ref HEAD)'
 alias gs='git status'
+
+function gr {
+    if [ "$#" -ne 1 ]; then
+        exit 1
+    fi
+    git rebase -i HEAD~"$1"
+}
