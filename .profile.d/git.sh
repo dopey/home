@@ -19,11 +19,22 @@ alias gpm='git push origin master'
 alias gpt='git push origin tag'
 alias gpu='git push --set-upstream origin $(git rev-parse --abbrev-ref HEAD)'
 alias gs='git status'
-alias gt='git tag'
 
-function gr {
+function gr() {
     if [ "$#" -ne 1 ]; then
-        exit 1
+        echo "Error: missing number of commits for rebase"
+        return 1
     fi
     git rebase -i HEAD~"$1"
+}
+
+function gt() {
+    if [ "$#" -eq 0 ]; then
+        git tag | sed 's|.*/\(.*\)$|\1|' | grep -v '\^' | sort -t. -k1,1nr -k2,2nr -k3,3nr -k4,4nr | head -5
+    elif [ "$#" -eq 1 ]; then
+        git tag "$1"
+    else
+        echo "Error: 'git tag' can have 0 or 1 parameters only."
+        return 1
+    fi
 }
