@@ -283,7 +283,7 @@ nnoremap <space>gpl :Gpull<CR>
 " =============================================================================
 
 " nerd-tree
-map <C-y> :NERDTreeToggle<CR>
+map <leader>t :NERDTreeToggle<CR>
 
 " FZF
 if g:os == "Darwin"
