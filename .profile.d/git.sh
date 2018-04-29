@@ -15,7 +15,7 @@ alias gm='git merge'
 alias gp='git push'
 alias gpf='git push --force'
 alias gpm='git push origin master'
-alias gpt='git push origin tag'
+alias gpt='git push origin tag $(git describe --tags --dirty | sed "s/^v//")'
 alias gpu='git push --set-upstream origin $(git rev-parse --abbrev-ref HEAD)'
 alias gs='git status'
 
