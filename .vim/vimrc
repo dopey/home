@@ -366,7 +366,9 @@ map <C-j> :cnext<CR>
 " previous in quickfix list
 map <C-k> :cprevious<CR>
 " close in quickfix list
-nnoremap <leader>a :cclose<CR>
+nnoremap <leader>z :cclose<CR>
+" go alternate
+nnoremap <leader>a :GoAlternate<CR>
 " run :GoBuild or :GoTestCompile based on the go file
 function! s:build_go_files()
   let l:file = expand('%')
