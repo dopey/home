@@ -1,6 +1,7 @@
 #!/bin/sh
 
 alias ga='git add'
+alias gaf='git add -f'
 alias gb='git branch'
 alias gbd='git branch -D'
 alias gc='git checkout'
@@ -9,7 +10,7 @@ alias gcm='git checkout master'
 alias gd='git diff --color'
 alias gi='git commit -av'
 alias gia='git commit --amend'
-alias gl='git pull --rebase && git fetch --all'
+alias glr='git pull --rebase && git fetch --all'
 alias glrm='git pull --rebase origin master && git fetch --all'
 alias gm='git merge'
 alias gp='git push'

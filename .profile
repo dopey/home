@@ -6,8 +6,9 @@ if [[ "${OSTYPE}" == "darwin"* ]]; then
     PATH="${PATH}:/usr/local/lib/node_modules"
     PATH="${PATH}:${HOME}/bin:${HOME}/.bin"
     # smallstep
-    PATH="${PATH}:/Users/max/src/github.com/smallstep-team/step/bin"
-    export STEPPATH="/Users/max/src/github.com/smallstep-team/step/.step"
+    PATH="${PATH}:/Users/max/src/github.com/smallstep/cli/bin"
+    export STEPPATH="/Users/max/src/github.com/smallstep/cli/.step"
+    export CLI="/Users/max/src/github.com/smallstep/cli"
 elif [[ "${OSTYPE}" == "linux-gnu" ]]; then
     PATH="${PATH}:/snap/bin"
     PATH="${PATH}:${HOME}/.local/bin"
@@ -22,3 +23,6 @@ if [ -f '/Users/max/Library/google-cloud-sdk/path.bash.inc' ]; then source '/Use
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/max/Library/google-cloud-sdk/completion.bash.inc' ]; then source '/Users/max/Library/google-cloud-sdk/completion.bash.inc'; fi
+
+# The next line adds bash completion.
+[ -f '/usr/local/etc/bash_completion' ] && . '/usr/local/etc/bash_completion'
