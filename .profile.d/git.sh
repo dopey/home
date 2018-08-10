@@ -3,7 +3,9 @@
 alias ga='git add'
 alias gaf='git add -f'
 alias gb='git branch'
-alias gbd='git branch -D'
+alias gbd='git branch -d'
+alias gbD='git branch -D'
+alias gbdr='git push origin --delete'
 alias gc='git checkout'
 alias gcb='git checkout -B'
 alias gcm='git checkout master'
@@ -20,6 +22,15 @@ alias gpt='git push origin tag $(git describe --tags --dirty)'
 alias gpu='git push --set-upstream origin $(git rev-parse --abbrev-ref HEAD)'
 alias gs='git status'
 alias gtd='git tag -d'
+
+# Git branch delete local and remote
+function gbdlr() {
+    if [ "$#" -ne 1 ]; then
+        echo "Error: gdbR expects 1 positional argument -- <branch> to be deleted"
+        return 1
+    fi
+    git branch -d "${1}" && git push origin --delete "${1}"
+}
 
 # Git Rebase
 function gr() {
