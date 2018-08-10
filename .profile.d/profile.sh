@@ -67,8 +67,8 @@ shopt -s histappend                      # append to history, don't overwrite it
 # =============================================================================
 export CLICOLOR=1
 export TERM="xterm-256color"
-export EDITOR=vim
-export VISUAL=vim
+export EDITOR=nvim
+export VISUAL=nvim
 
 if [[ "${OSTYPE}" == "darwin"* ]]; then
     PG=/Users/max/src/playground
