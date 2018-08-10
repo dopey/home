@@ -5,10 +5,6 @@ PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin"
 if [[ "${OSTYPE}" == "darwin"* ]]; then
     PATH="${PATH}:/usr/local/lib/node_modules"
     PATH="${PATH}:${HOME}/bin:${HOME}/.bin"
-    # smallstep
-    PATH="${PATH}:/Users/max/src/github.com/smallstep/cli/bin"
-    export STEPPATH="/Users/max/src/github.com/smallstep/cli/.step"
-    export CLI="/Users/max/src/github.com/smallstep/cli"
 elif [[ "${OSTYPE}" == "linux-gnu" ]]; then
     PATH="${PATH}:/snap/bin"
     PATH="${PATH}:${HOME}/.local/bin"

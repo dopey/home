@@ -1,7 +1,10 @@
 #! /bin/bash
 
 export GOPATH="${HOME}"
-export GO="${HOME}/src/github.com/smallstep"
+export STEP="${GOPATH}/src/github.com/smallstep"
+export CLI="${STEP}/cli"
+
+PATH="${PATH}:${CLI}/bin"
 
 if [[ "${OSTYPE}" == "linux-gnu" ]]; then
     # go
