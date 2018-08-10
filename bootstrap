@@ -35,8 +35,6 @@ if [[ "${OSTYPE}" == "linux-gnu" ]]; then
         sudo apt-get update
         sudo apt-get install neovim=0.2.2
     fi
-    mkdir -p ".config/nvim"
-    ln -sf "${HOME}/.vim/vimrc" "${HOME}/.config/nvim/init.vim"
 
     # ------------
     # fzf
@@ -71,6 +69,12 @@ fi
 # vim submodules
 # ------------
 git submodule update --init --recursive
+
+# ------------
+# neovim common
+# ------------
+mkdir -p ".config/nvim"
+ln -sf "${HOME}/.vim/vimrc" "${HOME}/.config/nvim/init.vim"
 
 # ------------
 # .files
