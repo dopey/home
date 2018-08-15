@@ -18,18 +18,27 @@ alias gm='git merge'
 alias gp='git push'
 alias gpf='git push --force'
 alias gpm='git push origin master'
-alias gpt='git push origin tag $(git describe --tags --dirty)'
 alias gpu='git push --set-upstream origin $(git rev-parse --abbrev-ref HEAD)'
 alias gs='git status'
 alias gtd='git tag -d'
+alias gtp='git push origin tag $(git describe --tags --dirty)'
 
 # Git branch delete local and remote
 function gbdlr() {
     if [ "$#" -ne 1 ]; then
-        echo "Error: gdbR expects 1 positional argument -- <branch> to be deleted"
+        echo "Error: gdblr expects 1 positional argument -- <branch> to be deleted"
         return 1
     fi
-    git branch -d "${1}" && git push origin --delete "${1}"
+    git branch -d "${1}" && git push --delete origin "${1}"
+}
+
+# Git tag delete local and remote
+function gtdlr() {
+    if [ "$#" -ne 1 ]; then
+        echo "Error: gtdlr expects 1 positional argument -- <tag> to be deleted"
+        return 1
+    fi
+    git tag -d "${1}" && git push --delete origin "${1}"
 }
 
 # Git Rebase
