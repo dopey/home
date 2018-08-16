@@ -41,6 +41,15 @@ function gtdlr() {
     git tag -d "${1}" && git push --delete origin "${1}"
 }
 
+# Git tag push local and remote
+function gtplr() {
+    if [ "$#" -ne 1 ]; then
+        echo "Error: gtdlr expects 1 positional argument -- <tag> to be deleted"
+        return 1
+    fi
+    git tag "${1}" && git push origin tag "${1}"
+}
+
 # Git Rebase
 function gr() {
     if [ "$#" -ne 1 ]; then
