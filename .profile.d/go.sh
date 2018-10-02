@@ -1,11 +1,12 @@
 #! /bin/bash
 
 export GOPATH="${HOME}"
-export STEP="${GOPATH}/src/github.com/smallstep"
-export STEPPATH="${GOPATH}/src/github.com/smallstep/step/.step"
-export CLI="${STEP}/cli"
-export CA="${STEP}/ca-component"
-export STEP="${GOPATH}/src/github.com/smallstep/step/.step"
+
+export WORK="${GOPATH}/src/github.com/smallstep"
+export CA="${WORK}/ca-component"
+export CLI="${WORK}/cli"
+export STEP="${WORK}/step"
+export STEPPATH="${STEP}/.step"
 
 PATH="${PATH}:${CLI}/bin"
 
