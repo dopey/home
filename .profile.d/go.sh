@@ -2,7 +2,10 @@
 
 export GOPATH="${HOME}"
 export STEP="${GOPATH}/src/github.com/smallstep"
+export STEPPATH="${GOPATH}/src/github.com/smallstep/step/.step"
 export CLI="${STEP}/cli"
+export CA="${STEP}/ca-component"
+export STEP="${GOPATH}/src/github.com/smallstep/step/.step"
 
 PATH="${PATH}:${CLI}/bin"
 

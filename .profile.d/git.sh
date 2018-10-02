@@ -3,11 +3,11 @@
 alias ga='git add'
 alias gaf='git add -f'
 alias gb='git branch'
+alias gbc='git checkout -B'   # I think of it as `git branch create`
 alias gbd='git branch -d'
 alias gbD='git branch -D'
 alias gbdr='git push origin --delete'
 alias gc='git checkout'
-alias gcb='git checkout -B'
 alias gcm='git checkout master'
 alias gd='git diff --color'
 alias gi='git commit -av'
