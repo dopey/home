@@ -3,7 +3,7 @@
 export GOPATH="${HOME}"
 
 export WORK="${GOPATH}/src/github.com/smallstep"
-export CA="${WORK}/ca-component"
+export CA="${WORK}/certificates"
 export CLI="${WORK}/cli"
 export STEP="${WORK}/step"
 export STEPPATH="${STEP}/.step"
