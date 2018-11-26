@@ -33,6 +33,15 @@ function gbdlr() {
     git branch -d "${1}" && git push --delete origin "${1}"
 }
 
+# Git branch delete local and remote
+function gbDlr() {
+    if [ "$#" -ne 1 ]; then
+        echo "Error: gdblr expects 1 positional argument -- <branch> to be deleted"
+        return 1
+    fi
+    git branch -D "${1}" && git push --delete origin "${1}"
+}
+
 # Git tag delete local and remote
 function gtdlr() {
     if [ "$#" -ne 1 ]; then
