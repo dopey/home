@@ -30,22 +30,22 @@
 	url = https://github.com/tpope/vim-fugitive.git
 [submodule ".vim/bundle/go"]
 	path = .vim/bundle/go
-	url = git@github.com:dopey/vim-go.git
+	url = https://github.com/dopey/vim-go.git
 [submodule ".vim/bundle/javascript"]
 	path = .vim/bundle/javascript
-	url = git@github.com:dopey/vim-javascript.git
+	url = https://github.com/dopey/vim-javascript.git
 [submodule ".vim/bundle/javascript-syntax"]
 	path = .vim/bundle/javascript-syntax
-	url = git@github.com:dopey/vim-javascript-syntax.git
+	url = https://github.com/dopey/vim-javascript-syntax.git
 [submodule ".vim/bundle/jsdoc"]
 	path = .vim/bundle/jsdoc
-	url = git@github.com:dopey/vim-jsdoc.git
+	url = https://github.com/dopey/vim-jsdoc.git
 [submodule ".vim/bundle/multiple-cursors"]
 	path = .vim/bundle/multiple-cursors
-	url = git@github.com:dopey/vim-multiple-cursors.git
+	url = https://github.com/dopey/vim-multiple-cursors.git
 [submodule ".vim/bundle/puppet"]
 	path = .vim/bundle/puppet
-	url = git@github.com:dopey/vim-puppet.git
+	url = https://github.com/dopey/vim-puppet.git
 [submodule ".vim/bundle/repeat"]
 	path = .vim/bundle/repeat
 	url = https://github.com/tpope/vim-repeat.git
@@ -54,7 +54,7 @@
 	url = https://github.com/airblade/vim-rooter.git
 [submodule ".vim/bundle/surround"]
 	path = .vim/bundle/surround
-	url = git@github.com:dopey/vim-surround.git
+	url = https://github.com/dopey/vim-surround.git
 [submodule ".vim/bundle/markdown-preview"]
 	path = .vim/bundle/markdown-preview
 	url = https://github.com/JamshedVesuna/vim-markdown-preview.git
