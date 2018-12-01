@@ -2,18 +2,21 @@ if has('nvim')
     set runtimepath^=~/.vim runtimepath+=~/.vim/after
     let &packpath = &runtimepath
 endif
-"
+
 " =============================================================================
 " Pathogen
 " =============================================================================
 let g:pathogen_disabled = []
 if $USER != "max"
     call add(g:pathogen_disabled, "ultisnips")
-    call add(g:pathogen_disabled, "voicecode")
 endif
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
+" =============================================================================
+" Python
+" =============================================================================
+let g:python_host_prog='/home'
 
 " =============================================================================
 " General Settings
