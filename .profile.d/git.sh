@@ -19,6 +19,7 @@ alias gp='git push'
 alias gpf='git push --force'
 alias gpm='git push origin master'
 alias gpu='git push --set-upstream origin $(git rev-parse --abbrev-ref HEAD)'
+alias grom='git reset --hard origin/master'
 alias gs='git status'
 alias gso='git show'
 alias gtd='git tag -d'
@@ -63,10 +64,14 @@ function gtplr() {
 # Git Rebase
 function gr() {
     if [ "$#" -ne 1 ]; then
-        echo "Error: missing number of commits for rebase"
+        echo "Error: git rebase requires arguments"
         return 1
     fi
-    git rebase -i HEAD~"$1"
+    if [ $1 -eq $1 2>/dev/null ]; then
+        git rebase -i HEAD~"$1"
+    else
+        git rebase $1
+    fi
 }
 
 # Git Tag
