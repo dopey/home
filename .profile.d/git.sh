@@ -78,7 +78,7 @@ function gr() {
 # Git Tag
 function gt() {
     if [ "$#" -eq 0 ]; then
-        git tag | sed 's|.*/\(.*\)$|\1|' | grep -v '\^' | sort -t. -k1,1nr -k2,2nr -k3,3nr -k4,4nr | head -20
+        git -c 'versionsort.suffix=-' tag -l --sort=-v:refname | head -20
     elif [ "$#" -eq 1 ]; then
         git tag "$1"
     else
