@@ -448,6 +448,11 @@ __git_ps1 ()
 			printf -v gitstring -- "$printf_format" "$gitstring"
 		fi
 		PS1="$ps1pc_start$gitstring$ps1pc_end"
+        ##### uncomment below lines for shooting terminal gifs
+        # none="$(tput sgr0)"
+        # PS1="\e[0;33m\$ "
+        # trap 'echo -ne "${none}"' DEBUG
+        #####
 	else
 		printf -- "$printf_format" "$gitstring"
 	fi

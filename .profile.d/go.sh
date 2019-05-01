@@ -8,7 +8,7 @@ export CLI="${WORK}/cli"
 export STEP="${WORK}/step"
 export STEPPATH="${STEP}/.step"
 
-PATH="${PATH}:${CLI}/bin"
+PATH="${PATH}:${CLI}/bin:${CA}/bin"
 
 if [[ "${OSTYPE}" == "linux-gnu" ]]; then
     # go

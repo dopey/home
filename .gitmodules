@@ -64,3 +64,6 @@
 [submodule ".vim/bundle/rhubarb"]
 	path = .vim/bundle/rhubarb
 	url = https://github.com/tpope/vim-rhubarb.git
+[submodule "/Users/max/.vim/bundle/gotests"]
+	path = /Users/max/.vim/bundle/gotests
+	url = https://github.com/buoto/gotests-vim.git
