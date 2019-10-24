@@ -311,6 +311,11 @@ else
     set rtp+=~/.fzf         "linux
 endif
 
+" =============================================================================
+" Crontab
+" =============================================================================
+autocmd filetype crontab setlocal nobackup nowritebackup
+
 
 " =============================================================================
 " Markdown-Preview
@@ -409,7 +414,11 @@ let g:go_highlight_functions = 1
 
 " go-metalinter on save
 let g:go_metalinter_autosave = 1
+" use golangci-lint
+let g:go_metalinter_command = "golangci-lint"
+" use quickfix list type
+let g:go_list_type = 'quickfix'
 " checkers to run on save
-let g:go_metalinter_autosave_enabled = ['vet', 'golint']
+let g:go_metalinter_autosave_enabled = ['deadcode', 'gosimple', 'govet', 'golint', 'ineffassign', 'staticcheck', 'structcheck', 'typecheck', 'unused', 'varcheck']
 " auto highlight sameIds
 "let g:go_auto_sameids = 1

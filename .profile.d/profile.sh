@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # =============================================================================
-# Bash Prompt
+# ZSH Prompt
 # =============================================================================
 
 . $HOME/.profile.d/colors.sh
@@ -9,7 +9,8 @@
 
 if [[ "${OSTYPE}" == "darwin"* ]]; then
     POINTER_CHAR="⬆"
-    PREINFO="\n$POINTER_CHAR $BIBLUE[ "$BLUE"exit: $WHITE\$?$BIBLUE ] [ "$BLUE"time: $WHITE\t$BIBLUE ]$END_COLOR"
+    #PREINFO="\n$POINTER_CHAR $BIBLUE[ exit: $WHITE\$?$BIBLUE ] [ "$BLUE"time: $WHITE\t$BIBLUE ]$END_COLOR"
+    PREINFO="\n$POINTER_CHAR"
     PREGIT="$PREINFO\n$WHITE\u $PURPLE@ $BLUE\h$WHITE \w$END_COLOR"
     POSTGIT=" $RED\$$END_COLOR "
 elif [[ "${OSTYPE}" == "linux-gnu" ]]; then
@@ -46,8 +47,7 @@ fi
 # dir navigation
 alias ..='cd ..'
 alias ...='cd ../..'
-alias ?='dirs -v'
-alias +='pushd'
+alias -- +='pushd'
 alias -- -='popd'
 alias vi=nvim
 
@@ -55,12 +55,12 @@ alias vi=nvim
 alias myip="ifconfig | grep '^\s*inet ' | grep -v 127.0.0.1 | cut -d' ' -f2"
 
 # =============================================================================
-# Bash History
+# ZSH History
 # =============================================================================
 export HISTCONTROL=ignoredups:erasedups  # no duplicate entries
 export HISTSIZE=100000                   # big big history
 export HISTFILESIZE=100000               # big big history
-shopt -s histappend                      # append to history, don't overwrite it
+#shopt -s histappend                      # append to history, don't overwrite it
 
 # =============================================================================
 # Miscellaneous
@@ -74,8 +74,8 @@ if [[ "${OSTYPE}" == "darwin"* ]]; then
     PG=/Users/max/src/playground
     GOSRC=/usr/local/Cellar/go/1.1
 
-    if [ -f $(brew --prefix)/etc/bash_completion ]; then
-        . $(brew --prefix)/etc/bash_completion
+    if [ -f $(brew --prefix)/etc/zsh_completion ]; then
+        . $(brew --prefix)/etc/zsh_completion
     fi
 fi
 
