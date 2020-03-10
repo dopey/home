@@ -67,3 +67,6 @@
 [submodule "/Users/max/.vim/bundle/gotests"]
 	path = /Users/max/.vim/bundle/gotests
 	url = https://github.com/buoto/gotests-vim.git
+[submodule ".vim/bundle/terraform"]
+	path = .vim/bundle/terraform
+	url = https://github.com/hashivim/vim-terraform.git

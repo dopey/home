@@ -119,3 +119,6 @@ plugins=(
 #
 
 unsetopt share_history
+
+export NVM_DIR="/Users/max/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
