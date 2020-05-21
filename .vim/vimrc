@@ -29,6 +29,7 @@ au BufWritePost .vimrc so ~/.vimrc "automatically reload vimrc when it's saved
 au FileType javascript set dictionary+=$HOME/.vim/bundle/node-vim/dict/node.dict    "node dictionary
 au FileType puppet setlocal tabstop=4 expandtab shiftwidth=4 softtabstop=4
 au FileType terraform setlocal tabstop=2 expandtab shiftwidth=2 softtabstop=2
+au FileType yaml setlocal tabstop=2 expandtab shiftwidth=2 softtabstop=2
 "resize splits when the window is resized
 au VimResized * exe 'normal! \<c-2>='
 
