@@ -75,58 +75,58 @@ ZSH_THEME="agnoster-lima"
 # User configuration
 source $ZSH/oh-my-zsh.sh
 
-## Which plugins would you like to load?
-## Standard plugins can be found in ~/.oh-my-zsh/plugins/*
-## Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-## Example format: plugins=(rails git textmate ruby lighthouse)
-## Add wisely, as too many plugins slow down shell startup.
-#plugins=(
-#    dnf
-#    # vi-mode must come before fzf, otherwize Ctr-R fzf is overwritten.
-#    vi-mode
-#    fzf
-#    #git
-#    zsh-syntax-highlighting
-#    zsh-autosuggestions
-#)
+# Which plugins would you like to load?
+# Standard plugins can be found in ~/.oh-my-zsh/plugins/*
+# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+# Add wisely, as too many plugins slow down shell startup.
+plugins=(
+    dnf
+    # vi-mode must come before fzf, otherwize Ctr-R fzf is overwritten.
+    vi-mode
+    fzf
+    #git
+    zsh-syntax-highlighting
+    zsh-autosuggestions
+)
+
+# export MANPATH="/usr/local/man:$MANPATH"
+
+# You may need to manually set your language environment
+# export LANG=en_US.UTF-8
+
+# Preferred editor for local and remote sessions
+# if [[ -n $SSH_CONNECTION ]]; then
+#   export EDITOR='vim'
+# else
+#   export EDITOR='mvim'
+# fi
+
+# Compilation flags
+# export ARCHFLAGS="-arch x86_64"
+
+# Set personal aliases, overriding those provided by oh-my-zsh libs,
+# plugins, and themes. Aliases can be placed here, though oh-my-zsh
+# users are encouraged to define aliases within the ZSH_CUSTOM folder.
+# For a full list of active aliases, run `alias`.
 #
-## export MANPATH="/usr/local/man:$MANPATH"
+# Example aliases
+# alias zshconfig="mate ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+#[[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
 #
-## You may need to manually set your language environment
-## export LANG=en_US.UTF-8
-#
-## Preferred editor for local and remote sessions
-## if [[ -n $SSH_CONNECTION ]]; then
-##   export EDITOR='vim'
-## else
-##   export EDITOR='mvim'
-## fi
-#
-## Compilation flags
-## export ARCHFLAGS="-arch x86_64"
-#
-## Set personal aliases, overriding those provided by oh-my-zsh libs,
-## plugins, and themes. Aliases can be placed here, though oh-my-zsh
-## users are encouraged to define aliases within the ZSH_CUSTOM folder.
-## For a full list of active aliases, run `alias`.
-##
-## Example aliases
-## alias zshconfig="mate ~/.zshrc"
-## alias ohmyzsh="mate ~/.oh-my-zsh"
-#
-## To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-##[[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
-##
-#
-#unsetopt inc_append_history
-#unsetopt share_history
-#
-#export NVM_DIR="/Users/max/.nvm"
-#[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-#. "/Users/max/.acme.sh/acme.sh.env"
-#
-## The next line updates PATH for the Google Cloud SDK.
-#if [ -f '/Users/max/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/max/Downloads/google-cloud-sdk/path.zsh.inc'; fi
-#
-## The next line enables shell command completion for gcloud.
-#if [ -f '/Users/max/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/max/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
+
+unsetopt inc_append_history
+unsetopt share_history
+
+export NVM_DIR="/Users/max/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+. "/Users/max/.acme.sh/acme.sh.env"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/max/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/max/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/max/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/max/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
