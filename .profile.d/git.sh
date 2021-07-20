@@ -2,7 +2,7 @@
 
 alias ga='git add'
 alias gaf='git add -f'
-alias gb='git branch'
+alias gb='git --no-pager branch'
 alias gbc='git checkout -B'   # I think of it as `git branch create`
 alias gbd='git branch -d'
 alias gbD='git branch -D'
@@ -25,6 +25,7 @@ alias gs='git status'
 alias gso='git show'
 alias gtd='git tag -d'
 alias gtp='git push origin tag $(git describe --tags --dirty)'
+alias ggrep='git grep'
 
 # Git branch delete local and remote
 function gbdlr() {

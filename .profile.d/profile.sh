@@ -32,7 +32,8 @@ export GIT_PS1_SHOWUPSTREAM="auto"
 # =============================================================================
 
 if [[ "${OSTYPE}" == "darwin"* ]]; then
-    alias grep='ggrep'
+    # GNU grep on OSX
+    #alias grep='ggrep'
     alias hangoutsrage='sudo killall AppleCameraAssistant'
     alias vg='vagrant'
     alias la='ls -la'

@@ -43,5 +43,7 @@
 	followTags = true
 [help]
     autocorrect = 1
+[url "ssh://git@github.com/"]
+	insteadOf = https://github.com/
 [url "git@github.com:"]
 	insteadOf = https://github.com/

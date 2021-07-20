@@ -25,13 +25,12 @@ call pathogen#helptags()
 set guicursor=a:blinkon0    "stop blinking cursor
 set number                  "set line numbers
 filetype plugin indent on   "figure out file type
-au BufWritePost .vimrc so ~/.vimrc "automatically reload vimrc when it's saved
+" Set filetype for mdx files to markdown
+au Bufread,BufNewFile *.mdx set filetype=markdown
 au FileType javascript set dictionary+=$HOME/.vim/bundle/node-vim/dict/node.dict    "node dictionary
-au FileType puppet setlocal tabstop=4 expandtab shiftwidth=4 softtabstop=4
-au FileType terraform setlocal tabstop=2 expandtab shiftwidth=2 softtabstop=2
-au FileType yaml setlocal tabstop=2 expandtab shiftwidth=2 softtabstop=2
 "resize splits when the window is resized
 au VimResized * exe 'normal! \<c-2>='
+au BufWritePost .vimrc so ~/.vimrc "automatically reload vimrc when it's saved
 
 " Set OS variable
 if !exists("g:os")
@@ -53,6 +52,10 @@ set smarttab
 set cindent
 
 au FileType javascript setlocal shiftwidth=4 softtabstop=4 tabstop=4
+au FileType puppet setlocal tabstop=4 expandtab shiftwidth=4 softtabstop=4
+au FileType terraform setlocal tabstop=2 expandtab shiftwidth=2 softtabstop=2
+au FileType markdown setlocal tabstop=4 expandtab shiftwidth=4 softtabstop=4
+au FileType yaml setlocal tabstop=2 expandtab shiftwidth=2 softtabstop=2
 
 au FileType make setlocal noexpandtab
 
@@ -219,8 +222,16 @@ noremap ;; ;
 
 "Make operation from within vim/ open vertical window
 "nnoremap <C-c> :!cscope -Rbq<CR> :cs add cscope.out<CR>
+
 " automatically strip trailing whitespace when a file is saved
-  :autocmd BufWritePre * :%s/\s\+$//e
+fun! StripTrailingWhitespace()
+    " don't strip on these filetypes
+    if &ft =~ 'markdown'
+        return
+    endif
+    %s/\s\+$//e
+endfun
+autocmd BufWritePre * call StripTrailingWhitespace()
 
 " Cscope
 " --------
@@ -415,7 +426,7 @@ let g:go_highlight_operators = 1
 let g:go_highlight_functions = 1
 
 " go-metalinter on save
-let g:go_metalinter_autosave = 1
+let g:go_metalinter_autosave = 0
 " use golangci-lint
 let g:go_metalinter_command = "golangci-lint"
 " use quickfix list type
@@ -440,3 +451,5 @@ let g:terraform_align=1
 " Allow vim-terraform to automatically format *.tf and *.tfvars files with
 " terraform fmt. You can also do this manually with the :TerraformFmt command.
 let g:terraform_fmt_on_save=1
+
+let $GOPRIVATE = 'go.step.sm,github.com/smallstep'
