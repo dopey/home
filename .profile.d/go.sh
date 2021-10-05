@@ -1,14 +1,6 @@
-#! /bin/bash
+#! /bin/sh
 
 export GOPATH="${HOME}"
-
-export WORK="${GOPATH}/src/github.com/smallstep"
-export CA="${WORK}/certificates"
-export CLI="${WORK}/cli"
-export STEP="${WORK}/step"
-export STEPPATH="${STEP}/.step"
-
-PATH="${PATH}:${CLI}/bin:${CA}/bin"
 
 if [[ "${OSTYPE}" == "linux-gnu" ]]; then
     # go

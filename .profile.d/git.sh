@@ -8,7 +8,6 @@ alias gbd='git branch -d'
 alias gbD='git branch -D'
 alias gbdr='git push origin --delete'
 alias gc='git checkout'
-alias gcm='git checkout master'
 alias gd='git diff --color'
 alias gi='git commit -av'
 alias gia='git commit --amend'
@@ -26,6 +25,16 @@ alias gso='git show'
 alias gtd='git tag -d'
 alias gtp='git push origin tag $(git describe --tags --dirty)'
 alias ggrep='git grep'
+
+# Git checkout 'master' or 'main' branch
+function gcm() {
+    git show-ref --verify --quiet refs/heads/master
+    if [ $? -eq 0 ]; then
+        git checkout master
+    else
+        git checkout main
+    fi
+}
 
 # Git branch delete local and remote
 function gbdlr() {
