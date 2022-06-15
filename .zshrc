@@ -126,7 +126,7 @@ export NVM_DIR="/Users/max/.nvm"
 . "/Users/max/.acme.sh/acme.sh.env"
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/max/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/max/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+if [ -f '/Users/max/Downloads/google-cloud-sdk 2/path.zsh.inc' ]; then . '/Users/max/Downloads/google-cloud-sdk 2/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/Users/max/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/max/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
+if [ -f '/Users/max/Downloads/google-cloud-sdk 2/completion.zsh.inc' ]; then . '/Users/max/Downloads/google-cloud-sdk 2/completion.zsh.inc'; fi

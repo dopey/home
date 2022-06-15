@@ -1,6 +1,6 @@
 #! /bin/bash
 
-PATH="/Users/max/src/github.com/smallstep/cli/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin"
+PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin"
 
 if [[ "${OSTYPE}" == "darwin"* ]]; then
     PATH="${PATH}:/usr/local/lib/node_modules"
